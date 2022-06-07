@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Charis+SIL&family=Inter:wght@200&family=Roboto:wght@300&display=swap');
+
+
+@font-face {
+  font-family: 'clash display';
+  src: local('clash display'), url(./fonts/ClashDisplay-Medium.woff) format('woff');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+
+$primaryColor: #9F9E9E;
+$secondaryColor: #3c00ff;
+$mainWhite: #fff;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  color: $primaryColor;
+  font-size: 100%;
+  margin: 0;
+  line-height: 1.4283;
+  font-family: "Segoe UI", "Roboto", Verdana, "Helvetica Neue", sans-serif,"Archivo","Charis SIL","Inter","clash display";
+}
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+a {
+  color: $secondaryColor;
+  text-decoration: none;
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

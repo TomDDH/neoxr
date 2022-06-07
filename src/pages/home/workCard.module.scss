@@ -1,0 +1,51 @@
+.card {
+  color: black;
+  height: 630px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 20px;
+
+}
+.box {
+  position: relative;
+  background: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  gap:20px;
+  font-weight: 600;
+  padding: 30px 20px;
+  box-shadow: 0 0 25px #021f42a1;
+}
+.videoCard{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 1px solid #EBEBF1;
+}
+.video {
+  color: black;
+    width: 100%;
+}
+.title {
+  color: black;
+  font-family: Archiv,sans-serif;
+}
+.content {
+  color: black;
+}
+.button {
+  color: black;
+}

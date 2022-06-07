@@ -1,0 +1,47 @@
+.image{
+    position: absolute;
+    top: -10%;
+width: 30%;
+
+}
+.container{
+    color: black;
+    max-width: 300px;
+height: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 20px 0;
+margin: 20px;
+}
+.box{
+    position: relative;
+    background: #ecf3fe;
+    height: 100%;
+    width: 100%;
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-end;
+padding-bottom: 10%;
+border-radius: 10px;
+  }
+
+  .title{
+    font-size:1.2rem;
+    font-family:Archivo,sans-serif;
+    font-weight: 700;
+    text-align:center;
+    padding: 15px 30px;
+  }
+  .content{
+    color: black;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 150%;
+    text-align:center;
+    padding:0  30px   
+  }

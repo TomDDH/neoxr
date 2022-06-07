@@ -6,5 +6,17 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-sass",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-material-ui",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `NeoXR`,
+        short_name: `NeoXR`,
+        icon: `src/images/icon.png`
+      },
+    },
+  ],
 }
