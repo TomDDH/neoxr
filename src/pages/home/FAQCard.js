@@ -5,20 +5,13 @@ import {
   AccordionDetails,
   Typography,
   Container,
-  Stack,
-  Item,
-  Button,
   AccordionSummary,
-  MenuItem,
   Divider,
-  Box,
-  Avatar,
 } from "@mui/material"
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 
 const FAQCard = props => {
-  const data = props.data
 
   const [expanded, setExpanded] = useState(false)
   const handleChange = panel => (event, isExpanded) => {
@@ -47,11 +40,11 @@ const FAQCard = props => {
           id="panel4bh-header"
         >
           <Typography sx={{ width: "100%", flexShrink: 0, fontFamily: "Roboto",fontWeight:"800",color:"black" }}>
-            {data.title}
+            {props.title}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>{data.content}</Typography>
+          <Typography>{props.content}</Typography>
         </AccordionDetails>
       </Accordion>
       <Divider sx={{

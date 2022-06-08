@@ -1,20 +1,16 @@
 import React from "react"
-import * as style from "./testimonialCard.module.scss"
 import { Typography, Box, Paper, Avatar, Stack } from "@mui/material"
 import StarRateIcon from "@mui/icons-material/StarRate"
-import { padding } from "@mui/system"
 
 const TestimonialCard = props => {
-  const data = props.data
-
   const list = []
 
-  for (let index = 0; index < data.stars; index++) {
+  for (let index = 0; index <props.stars; index++) {
     list.push(index)
   }
 
   return (
-    <div className={style.container}>
+    <div className={null}>
       <Paper
         elevation={3}
         sx={{
@@ -42,8 +38,9 @@ const TestimonialCard = props => {
           }}
         >
           <Stack direction="row" spacing={0}>
-            {list.map(() => (
+            {list.map((data, index) => (
               <StarRateIcon
+              key = {index}
                 sx={{
                   color: "#FFC947",
                   alignSelf: "start",
@@ -61,10 +58,10 @@ const TestimonialCard = props => {
               padding: "20px 0",
             }}
           >
-            {data.text}
+            {props.text}
           </Typography>
           <Stack direction="row" spacing={2}>
-            <Avatar variant="square" alt="NeoXR logo" src={data.image}></Avatar>
+            <Avatar variant="square" alt="NeoXR logo" src={props.image}></Avatar>
             <Box>
               <Typography
                 sx={{
@@ -73,9 +70,9 @@ const TestimonialCard = props => {
                   fontWeight: "700",
                 }}
               >
-                {data.name}
+                {props.name}
               </Typography>
-              <Typography>{data.role}</Typography>
+              <Typography>{props.role}</Typography>
             </Box>
           </Stack>
         </Box>

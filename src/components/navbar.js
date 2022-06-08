@@ -19,24 +19,18 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Container,
   Stack,
-  Item,
   Button,
-  Menu,
   MenuItem,
   Drawer,
   Box,
   Avatar,
 } from "@mui/material"
 
-import { ThreeDRotation } from "@mui/icons-material"
-
 import { Link } from "gatsby"
 
 import * as navbarCss from "./navBar.module.scss"
 
-// const pages = ["home", "Pricing", "Blog"]
 
 const pages = [
   {
@@ -60,48 +54,17 @@ const pages = [
     link: "/contact",
   },
 ]
-const navStyle = {
-
-    background : '#2E3B55',
-};
 
 
 const NavBar = () => {
-  //   const [anchorEl, setAnchorEl] = React.useState(null)
-  //   const open = Boolean(anchorEl)
-  //   const handleClick = event => {
-  //     setAnchorEl(event.currentTarget)
-  //   }
-  //   const handleClose = () => {
-  //     setAnchorEl(null)
-  //   }
 
-  //   toggleDrawer = (side, open) => () => {
-  //     this.setState({
-  //       [side]: open,
-  //     })
-  //   }
 
   const [open, setOpen] = useState(false)
   const [navBar, setNavBar] = useState(false)
 
-  //   const theme = createTheme({
-  //     components: {
-  //       MuiDrawer: {
-  //         styleOverrides: {
-  //           paper: {
-  //             background: "orange"
-  //           }
-  //         }
-  //       }
-  //     }
-  //   });
-
 useEffect(()=>{
     window.addEventListener("scroll",e=>{
         
-        // console.log(window.scrollY)
-
         if(window.scrollY>20){
             setNavBar(true)   
         }else{
@@ -134,8 +97,6 @@ useEffect(()=>{
             alignItems: "center",
           }}
         >
-          {/* <MenuIcon edge="start" size="large" color="white" /> */}
-          {/* <img className={navbarCss.logo} href="/" src={logo}></img> */}
           <Avatar variant="square" alt="NeoXR logo" src={logo}  sx={{
             width:{xs:"5rem",md:"7rem"}
           }}/>
@@ -167,9 +128,6 @@ useEffect(()=>{
           }}
         >
           {pages.map((page, index) => (
-            // <MenuItem key={page} onClick={handleCloseNavMenu}>
-            //   <Typography textAlign="center">{page}</Typography>
-            // </MenuItem>
             <Button key={page.title} sx={{
                 '&:hover': {
                     backgroundColor: '#ffffff14',
@@ -225,8 +183,7 @@ useEffect(()=>{
                 alignItems: "center",
               }}
             >
-              {/* <MenuIcon edge="start" size="large" color="white" /> */}
-              <img className={navbarCss.logo} src={logo}></img>
+              <img className={navbarCss.logo} src={logo} alt="neoxr ar vr"></img>
               <Typography
                 noWrap
                 component="a"

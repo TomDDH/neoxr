@@ -4,25 +4,16 @@ import NewsCard from "./NewsCard"
 import image from "../../images/home/news.png"
 
 import {
-  AppBar,
   Grid,
   Typography,
   Container,
-  Stack,
-  Item,
-  Button,
-  Menu,
-  MenuItem,
-  Drawer,
-  Box,
-  Avatar,
 } from "@mui/material"
 
 const newsData = [
   {
     title: "CoinMarketCap takes the Capital conference to the metaverse",
     image: image,
-    data: "September 14, 2016",
+    date: "September 14, 2016",
     content:
       "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
     link: "/contact",
@@ -30,7 +21,7 @@ const newsData = [
   {
     title: "CoinMarketCap takes the Capital conference to the metaverse",
     image: image,
-    data: "September 14, 2016",
+    WritableStreamDefaultWriter: "September 14, 2016",
     content:
       "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
     link: "/contact",
@@ -38,7 +29,7 @@ const newsData = [
   {
     title: "CoinMarketCap takes the Capital conference to the metaverse",
     image: image,
-    data: "September 14, 2016",
+    date: "September 14, 2016",
     content:
       "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
     link: "/contact",
@@ -46,7 +37,7 @@ const newsData = [
   {
     title: "CoinMarketCap takes the Capital conference to the metaverse",
     image: image,
-    data: "September 14, 2016",
+    date: "September 14, 2016",
     content:
       "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
     link: "/contact",
@@ -76,8 +67,9 @@ const NewsSection = () => {
       </Typography>
 
       <Grid container spacing={0}>
-        {newsData.map(data => (
+        {newsData.map((data, index) => (
           <Grid
+          key={index}
             item
             xs={12}
             md={3}
@@ -89,7 +81,7 @@ const NewsSection = () => {
               padding:"10px 10px"
             }}
           >
-            <NewsCard data={data}></NewsCard>
+            <NewsCard title={data.title}  image={data.image} date={data.date} content={data.content} link={data.link}></NewsCard>
           </Grid>
         ))}
       </Grid>

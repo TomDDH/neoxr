@@ -2,12 +2,9 @@ import React, { useRef } from "react"
 import emailjs from "@emailjs/browser"
 
 import {
-  Input ,
-  AccordionDetails,
   Typography,
   Container,
   Select,
-  Item,
   Button,
   InputLabel,
   MenuItem,

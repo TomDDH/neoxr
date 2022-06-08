@@ -1,5 +1,4 @@
 import React from "react"
-import * as style from "./NewsCard.module.scss"
 
 import {
   Card,
@@ -7,12 +6,7 @@ import {
   CardMedia,
   CardContent,
   CardActions,
-  Collapse,
   Typography,
-  Menu,
-  MenuItem,
-  Drawer,
-  Box,
   Avatar,
   Button,
   IconButton,
@@ -20,14 +14,12 @@ import {
 
 import FavoriteIcon from "@mui/icons-material/Favorite"
 import ShareIcon from "@mui/icons-material/Share"
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import MoreVertIcon from "@mui/icons-material/MoreVert"
 import ArrowRightAltSharpIcon from "@mui/icons-material/ArrowRightAltSharp"
 
 const NewsCard = props => {
 
 
-const data = props.data
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -42,8 +34,8 @@ const data = props.data
             <MoreVertIcon />
           </IconButton>
         }
-        title={data.title}
-        subheader={data.date}
+        title={props.title}
+        subheader={props.date}
         sx={{
           fontFamily: "clash display",
           color: "black",
@@ -58,7 +50,7 @@ const data = props.data
           },
         }}
       />
-      <CardMedia component="img" height="194" image={data.image} alt="Paella dish" />
+      <CardMedia component="img" height="194" image={props.image} alt="Paella dish" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
           This impressive paella is a perfect party dish and a fun meal to cook

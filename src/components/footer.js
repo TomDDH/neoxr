@@ -1,17 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import {
-  AppBar,
-  Toolbar,
   Typography,
-  Container,
   Stack,
-  Item,
   Button,
-  Menu,
-  MenuItem,
   Grid,
-  Box,
   Avatar,
 } from "@mui/material"
 import logo from "../images/logo.svg"
@@ -19,8 +12,6 @@ import FacebookIcon from "@mui/icons-material/Facebook"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import TwitterIcon from "@mui/icons-material/Twitter"
-import { margin, textAlign } from "@mui/system"
-
 const pages = [
   {
     title: "Who we help",
@@ -81,6 +72,7 @@ const Footer = () => {
         }}
       >
         <Grid
+        item
           xs={12}
           md={3}
           sx={{
@@ -127,6 +119,7 @@ const Footer = () => {
           </Stack>
         </Grid>
         <Grid
+        item
           xs={12}
           md={3}
           sx={{
@@ -144,7 +137,6 @@ const Footer = () => {
               fontFamily: "Inter",
               fontSize: { xs: "1.2rem", md: "1rem" },
               color: "white",
-              color: "white",
               fontWeight:"600",
               margin:"20px 0"
             }}
@@ -152,8 +144,9 @@ const Footer = () => {
             Company
           </Typography>
 
-          {pages.map(data => (
+          {pages.map((data,index) => (
             <Button
+            key = {index }
               sx={{
                 "&:hover": {
                   backgroundColor: "#ffffff14",
@@ -178,6 +171,7 @@ const Footer = () => {
 
 
         <Grid
+        item
           xs={12}
           md={3}
           sx={{
@@ -202,8 +196,9 @@ const Footer = () => {
             Help
           </Typography>
 
-          {helpPage.map(data => (
+          {helpPage.map((data,index) => (
             <Button
+            key={index}
               sx={{
                 "&:hover": {
                   backgroundColor: "#ffffff14",
@@ -235,22 +230,3 @@ const Footer = () => {
 }
 
 export default Footer
-
-// <Grid container spacing={0}>
-// {newsData.map(data => (
-//   <Grid
-//     item
-//     xs={12}
-//     md={3}
-//     sx={{
-//       display: "flex",
-//       with: "100%",
-//       justifyContent: "center",
-//       alignItems: "center",
-//       padding:"10px 10px"
-//     }}
-//   >
-//     <NewsCard data={data}></NewsCard>
-//   </Grid>
-// ))}
-// </Grid>

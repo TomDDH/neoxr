@@ -1,13 +1,8 @@
 import React from "react"
 import {
   Typography,
-  Card,
-  CardMedia,
   Container,
   Grid,
-  Box,
-  Button,
-  createTheme, 
 } from "@mui/material"
 import WhoWeHelpCard from "./whoWeHelpCard"
 

@@ -80,7 +80,6 @@ const VistorSection = () => {
             maxWidth: "750px",
             bgcolor: "white",
             width: "100%",
-            padding: "70px 0",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -90,8 +89,8 @@ const VistorSection = () => {
             zIndex:"10",
           }}
         >
-          {visitData.map(data => (
-            <VisitorDataCard data={data}></VisitorDataCard>
+          {visitData.map((data, index) => (
+            <VisitorDataCard key={index} title={data.title} number={data.number} amount={data.amount}></VisitorDataCard>
           ))}
           <Link
             href="#"
@@ -116,7 +115,7 @@ const VistorSection = () => {
           height: "420px",
           right: "0",
           bottom: "0",
-          background: "rgb(18 110 226 / 9%);",
+          background: "rgb(18 110 226 / 9%)",
           filter: "blur(80px)",
           zIndex: "1",
         }}

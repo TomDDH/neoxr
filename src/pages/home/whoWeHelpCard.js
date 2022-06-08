@@ -1,8 +1,6 @@
 import React from "react"
-import { Typography, Card, CardMedia, CardContent } from "@mui/material"
 import card1 from "../../images/whoWeHelp/cart.png"
 import * as cardStyle from "./whoWeHelpCard.module.scss"
-import { fontFamily } from "@mui/system"
 
 const WhoWeHelpCard = props => {
   return (

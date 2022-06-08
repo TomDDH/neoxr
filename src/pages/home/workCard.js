@@ -1,18 +1,20 @@
 import React from "react"
 import * as cardStyle from "./workCard.module.scss"
 
-import { Typography, Container, Box, Button } from "@mui/material"
+import {Button,CardMedia } from "@mui/material"
 import ArrowRightAltSharpIcon from "@mui/icons-material/ArrowRightAltSharp"
 
 const WorkCard = props => {
+
+
   return (
     <div className={cardStyle.card}>
       <div className={cardStyle.box}>
-        {/* <img className={cardStyle.image} src={card1} alt="Logo" /> */}
         <div className={cardStyle.videoCard}>
-        <video className={cardStyle.video} muted autoPlay playsinline src={props.data.image}></video>
+        <video className={cardStyle.video} muted autoPlay playsInline src={props.image}></video>
         </div>
-        <div className={cardStyle.title}>{props.data.title}</div>
+        <div className={cardStyle.title}>{props.title}</div>
+
         <Button 
             variant="outlined"
               sx={{

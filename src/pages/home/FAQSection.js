@@ -1,21 +1,9 @@
 import React from "react"
 import FAQCard from "./FAQCard"
 import {
-  AppBar,
-  Grid,
   Typography,
   Container,
-  Stack,
-  Item,
-  Button,
-  Menu,
-  MenuItem,
-  Drawer,
-  Box,
-  Avatar,
 } from "@mui/material"
-import { padding } from "@mui/system"
-
 const faqData = [
   {
     title:
@@ -75,8 +63,8 @@ const FAQSection = () => {
       >
         FAQ
       </Typography>
-      {faqData.map(data => (
-        <FAQCard data={data}></FAQCard>
+      {faqData.map((data, index) => (
+        <FAQCard key={index} title={data.title} content={data.content} ></FAQCard>
       ))}
     </Container>
   )

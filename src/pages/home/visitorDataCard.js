@@ -1,24 +1,13 @@
 import React from "react"
 
 import {
-  Accordion,
-  AccordionDetails,
   Typography,
   Container,
-  Select,
-  Item,
-  Button,
-  InputLabel,
-  MenuItem,
-  FormControl,
-  Box,
   Paper,
 } from "@mui/material"
-import { padding } from "@mui/system"
 
 const VisitorDataCard = props => {
 
-const data = props.data
 
   return (
     <Container sx={{
@@ -38,13 +27,13 @@ const data = props.data
         
         }}
       >
-        {data.title}
+        {props.title}
       </Typography>
 
       <Paper
         elevation={2}
         sx={{
-          width: data.amount,
+          width: props.amount,
           textAlign:"end",
           padding:"5px 10px",
           bgcolor:"#126ee2",
@@ -54,7 +43,7 @@ const data = props.data
 
         }}
       >
-        {data.number}
+        {props.number}
       </Paper>
     </Container>
   )

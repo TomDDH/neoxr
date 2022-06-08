@@ -1,22 +1,14 @@
 import React from "react"
 import imageHead from "./avatars/Oval.png"
-
 import {
   Typography,
-  Card,
-  CardMedia,
   Container,
-  Grid,
-  Box,
-  Button,
-  createTheme,
 } from "@mui/material"
-
 import TestimonialCard from "./testimonialCard"
-
 import * as style from "./testimonial.module.scss"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Autoplay, Pagination, Navigation } from "swiper"
+// import { Autoplay, Pagination, Navigation } from "swiper"
+import { Pagination, Navigation } from "swiper"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
@@ -104,9 +96,9 @@ const Testimonial = () => {
           className="mySwiper"
         >
           {
-            testimoialData.map(data=>(
-              <SwiperSlide>
-              <TestimonialCard data = {data}></TestimonialCard>
+            testimoialData.map((data, index)=>(
+              <SwiperSlide key={index}>
+              <TestimonialCard  stars={data.stars} text={data.text} name={data.name} role={data.role} image={data.image}    > </TestimonialCard>
             </SwiperSlide>
   
             ))

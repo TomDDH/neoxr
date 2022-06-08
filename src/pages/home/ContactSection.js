@@ -3,20 +3,9 @@ import ContactForm from "./ContactForm"
 import image from "../../images/contact.png"
 
 import {
-  Accordion,
-  AccordionDetails,
-  Typography,
   Container,
-  Select,
-  Item,
-  Button,
-  InputLabel,
-  MenuItem,
-  FormControl,
   Box,
-  TextField,
 } from "@mui/material"
-import zIndex from "@mui/material/styles/zIndex"
 const ContactSection = () => {
   return (
     <Container maxWidth="750px" sx={{
@@ -35,7 +24,7 @@ const ContactSection = () => {
           opacity:{xs:"0.3",md:"1"},
 
       }}>
-          <img style={{width:"100%"}} src={image}></img>
+          <img style={{width:"100%"}} src={image} alt="neoxr ar/vr imgae"></img>
       </Box>
     </Container>
   )

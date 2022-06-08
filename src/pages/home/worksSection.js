@@ -3,15 +3,9 @@ import WorkCard from "./workCard"
 import video from "./videos/car.mp4"
 import {
   Typography,
-  Card,
-  CardMedia,
   Container,
   Grid,
-  Box,
-  Button,
-  createTheme,
 } from "@mui/material"
-import WhoWeHelpCard from "./whoWeHelpCard"
 import * as style from "./worksSection.module.scss"
 
 const cardData = [
@@ -97,8 +91,9 @@ const WorksSection = () => {
           Our Works
         </Typography>
         <Grid container spacing={0} sx={{ width: "auto" }}>
-          {cardData.map(data => (
+          {cardData.map((data, index) => (
             <Grid
+            key={index}
               item
               xs={12}
               md={4}
@@ -109,7 +104,7 @@ const WorksSection = () => {
                 alignItems: "center",
               }}
             >
-              <WorkCard data={data}></WorkCard>
+              <WorkCard image ={data.image } title = {data.title}></WorkCard>
             </Grid>
           ))}
         </Grid>
