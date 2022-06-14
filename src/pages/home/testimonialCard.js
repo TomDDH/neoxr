@@ -61,7 +61,7 @@ const TestimonialCard = props => {
             {props.text}
           </Typography>
           <Stack direction="row" spacing={2}>
-            <Avatar variant="square" alt="NeoXR logo" src={props.image}></Avatar>
+            <Avatar alt="NeoXR logo" src={props.image}></Avatar>
             <Box>
               <Typography
                 sx={{

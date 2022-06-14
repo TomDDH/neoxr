@@ -1,19 +1,10 @@
-import React,{useState,useEffect} from "react"
-// import AppBar from "@mui/material/AppBar"
-// import Box from "@mui/material/Box"
-// import Toolbar from "@mui/material/Toolbar"
-// import IconButton from "@mui/material/IconButton"
-// import Typography from "@mui/material/Typography"
-// import Menu from "@mui/material/Menu"
+import React, { useState, useEffect } from "react"
 import MenuIcon from "@mui/icons-material/Menu"
-// import Container from "@mui/material/Container"
-// import Avatar from "@mui/material/Avatar"
-// import Button from "@mui/material/Button"
-// import Tooltip from "@mui/material/Tooltip"
-// import MenuItem from "@mui/material/MenuItem"
-// import AdbIcon from "@mui/icons-material/Adb"
-
 import logo from "../images/logo.svg"
+import { Link } from "gatsby"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+import * as navbarCss from "./navBar.module.scss"
+import { Tune } from "@mui/icons-material"
 
 import {
   AppBar,
@@ -27,23 +18,18 @@ import {
   Avatar,
 } from "@mui/material"
 
-import { Link } from "gatsby"
-
-import * as navbarCss from "./navBar.module.scss"
-
-
 const pages = [
   {
     title: "Who we help",
-    link: "/",
+    link: "/#help",
   },
   {
-    title: "Blog",
-    link: "/blog",
+    title: "How to Create WebAR",
+    link: "/howWebARWork",
   },
   {
     title: "FAQ",
-    link: "/questions",
+    link: "/faq",
   },
   {
     title: "Contact",
@@ -55,28 +41,30 @@ const pages = [
   },
 ]
 
-
-const NavBar = () => {
-
-
+const NavBar = props => {
   const [open, setOpen] = useState(false)
   const [navBar, setNavBar] = useState(false)
 
-useEffect(()=>{
-    window.addEventListener("scroll",e=>{
-        
-        if(window.scrollY>20){
-            setNavBar(true)   
-        }else{
-            setNavBar(false) 
-        }
-
+  useEffect(() => {
+    window.addEventListener("scroll", e => {
+      if (window.scrollY > 20) {
+        setNavBar(true)
+      } else {
+        setNavBar(false)
+      }
     })
-})
-
+  })
 
   return (
-    <AppBar style= {navBar?{backgroundColor: "#192443",transition: "background-color 1.5s ease"}:null}
+    <AppBar
+      style={
+        navBar || props.mode !== "home"
+          ? {
+              backgroundColor: "#192443",
+              transition: "background-color 1.5s ease",
+            }
+          : null
+      }
       position="fixed"
       color="transparent"
       sx={{
@@ -97,16 +85,22 @@ useEffect(()=>{
             alignItems: "center",
           }}
         >
-          <Avatar variant="square" alt="NeoXR logo" src={logo}  sx={{
-            width:{xs:"5rem",md:"7rem"}
-          }}/>
+          <Link to="/">
+          <Avatar
+            variant="square"
+            alt="NeoXR logo"
+            src={logo}
+            sx={{
+              width: { xs: "5rem", md: "7rem" },
+            }}
+          />
+          </Link>
           <Typography
             noWrap
             component="a"
-
             variant="h6"
             sx={{
-              fontSize:{ xs:"1.5rem",md:"2rem"},
+              fontSize: { xs: "1.5rem", md: "2rem" },
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
@@ -125,24 +119,29 @@ useEffect(()=>{
           spacing={2}
           sx={{
             display: { xs: "none", md: "flex" },
+            alignItems: "center",
+            fontWeight: "500",
           }}
         >
           {pages.map((page, index) => (
-            <Button key={page.title} sx={{
-                '&:hover': {
-                    backgroundColor: '#ffffff14',
-                    boxShadow: 'none',
+            <Link
+              className={index === 4 ? navbarCss.titleDemo : navbarCss.title}
+              to={page.link}
+            >
+              <Button
+                key={page.title}
+                sx={{
+                  "&:hover": {
+                    backgroundColor: "#ffffff14",
+                    boxShadow: "none",
                   },
+                  color: "white",
                   borderRadius: 8,
-            
-            }}>
-              <Link
-                className={index === 4 ? navbarCss.titleDemo : navbarCss.title}
-                to={page.link}
+                }}
               >
                 {page.title}
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           ))}
         </Stack>
         <Button
@@ -183,7 +182,11 @@ useEffect(()=>{
                 alignItems: "center",
               }}
             >
-              <img className={navbarCss.logo} src={logo} alt="neoxr ar vr"></img>
+              <img
+                className={navbarCss.logo}
+                src={logo}
+                alt="neoxr ar vr"
+              ></img>
               <Typography
                 noWrap
                 component="a"

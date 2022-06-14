@@ -7,33 +7,39 @@ import {
 const faqData = [
   {
     title:
-      "Does NeoXR have a development environment?",
+      "Why WebAR?",
     content:
-      "Yes, 8th Wall has a number of integrations with major volumetric video, or hologram, partners including Microsoft Mixed Reality Capture Studios, 8i, Tetavi, Depthkit and Arcturus.",
+      "The biggest benefit of WebAR is that you do NOT need download any apps. It is easy to access and gain more trafic.",
   },
   {
     title:
-      "Does NeoXR have a development environment?",
+      "Does WebAR free?",
     content:
-      "Yes, 8th Wall has a number of integrations with major volumetric video, or hologram, partners including Microsoft Mixed Reality Capture Studios, 8i, Tetavi, Depthkit and Arcturus.",
+      "Yes, WebAR can be free for most e-commerce products. but for more advance features we need use plugin like 8th wall or Zappar",
   },
   {
     title:
-      "Does NeoXR have a development environment?",
+      "What 3D format I need in WebAR?",
     content:
-      "Yes, 8th Wall has a number of integrations with major volumetric video, or hologram, partners including Microsoft Mixed Reality Capture Studios, 8i, Tetavi, Depthkit and Arcturus.",
+      "WebAR mostly use GLTF, GLB 3D file format. You can have any 3D format such as OBJ, FBX, USDZ, etc. we can convert if for you.",
   },
   {
     title:
-      "Does NeoXR have a development environment?",
+      "Waht is minimum 3D mode requirement?",
     content:
-      "Yes, 8th Wall has a number of integrations with major volumetric video, or hologram, partners including Microsoft Mixed Reality Capture Studios, 8i, Tetavi, Depthkit and Arcturus.",
+      "Highl detailed 3D models or super complex animations can cause web-based experiences to run slowly. Good performance 3D Scene criteria: 100k vertice count. max 6 materials, 1024X1024 textures",
   },
   {
     title:
-      "Does NeoXR have a development environment?",
+      "Can I add WebAR to my website",
     content:
-      "Yes, 8th Wall has a number of integrations with major volumetric video, or hologram, partners including Microsoft Mixed Reality Capture Studios, 8i, Tetavi, Depthkit and Arcturus.",
+      "Yes, you can embed WebAR app to any your website. Any other commerical platforms need deploy on thier could but they offer custom domain for you.",
+  },
+  {
+    title:
+      "What 3D frameworks does WebAR support?",
+    content:
+      "We have a easy work flow integrated into 3D JavaScript frameworks such as A-Frame, three.js. we develope with JavaScript, WebXR Device API, AR quick look ",
   },
 ]
 

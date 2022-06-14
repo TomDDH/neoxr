@@ -15,7 +15,7 @@ import TwitterIcon from "@mui/icons-material/Twitter"
 const pages = [
   {
     title: "Who we help",
-    link: "/",
+    link: "/#help",
   },
   {
     title: "Blog",
@@ -34,7 +34,7 @@ const pages = [
 const helpPage = [
   {
     title: "FAQ",
-    link: "/questions",
+    link: "/faq",
   },
   {
     title: "Terms & Conditions",

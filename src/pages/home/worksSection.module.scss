@@ -5,6 +5,8 @@
 // background: radial-gradient(circle, rgba(0,124,243,1) 0%, rgba(58,77,185,1) 99%);
 background: radial-gradient(circle, rgb(0, 83, 130) 0%, rgb(24 15 85) 99%);
     width: 100%;
+    position: relative;
+    overflow: hidden;
   }
   .title{
     color: white;

@@ -11,12 +11,12 @@ import {
 
 const newsData = [
   {
-    title: "CoinMarketCap takes the Capital conference to the metaverse",
+    title: "How WebAR help “SpongeBob on the run” Movie to Go Viral?",
     image: image,
     date: "September 14, 2016",
     content:
       "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
-    link: "/contact",
+    link: "/blogs/spongeBob",
   },
   {
     title: "CoinMarketCap takes the Capital conference to the metaverse",
@@ -24,7 +24,7 @@ const newsData = [
     WritableStreamDefaultWriter: "September 14, 2016",
     content:
       "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
-    link: "/contact",
+    link: "/blogs/spongeBob",
   },
   {
     title: "CoinMarketCap takes the Capital conference to the metaverse",
@@ -32,7 +32,7 @@ const newsData = [
     date: "September 14, 2016",
     content:
       "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
-    link: "/contact",
+    link: "/blogs/spongeBob",
   },
   {
     title: "CoinMarketCap takes the Capital conference to the metaverse",
@@ -40,7 +40,7 @@ const newsData = [
     date: "September 14, 2016",
     content:
       "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
-    link: "/contact",
+    link: "/blogs/spongeBob",
   },
 ]
 

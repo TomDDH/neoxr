@@ -1,12 +1,18 @@
 .header {
-    position: relative;
-    height: 660px;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("../../images/bg.png");
-  }
-  .title{
-    color: white;
-  }
+  position: relative;
+  height: 660px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-image: url("../../images/bg_blue.jpg");
+  // background: radial-gradient(circle, rgb(0, 83, 130) 0%, rgb(24 15 85) 99%);
+  background-color: #03a9f4;
+  // background-position: 120px 0;
+  z-index: 1;
+  -webkit-transition: background-image 0.6s ease-in-out;
+  transition: background-image 0.6s ease-in-out;
+}
+.title {
+  color: white;
+}

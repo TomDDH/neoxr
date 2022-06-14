@@ -17,12 +17,12 @@ const visitData = [
   {
     title: "ARKit",
     number: "1.25 Billion",
-    amount: "45%",
+    amount: "33%",
   },
   {
     title: "ARCore",
     number: "891 Million",
-    amount: "32%",
+    amount: "15%",
   },
 ]
 
@@ -34,7 +34,7 @@ const VistorSection = () => {
         padding: "70px 0",
         backgroundColor: "#ecf3fe",
         overflow:"hidden",
-        paddingBottom:"120px"
+        paddingBottom:"60px"
       }}
     >
 
@@ -73,11 +73,10 @@ const VistorSection = () => {
             maxWidth: "600px",
           }}
         >
-          WebAR Wall supports more smartphone users than any other AR platform.
+          WebAR supports more smartphone users than any other AR platform.
         </Typography>
         <Box
           sx={{
-            maxWidth: "750px",
             bgcolor: "white",
             width: "100%",
             display: "flex",
@@ -108,14 +107,47 @@ const VistorSection = () => {
             Source: AR Insider, 2021
           </Link>
         </Box>
+
+        <Typography
+          variant="h2"
+          component="h2"
+          sx={{
+            fontFamily: "Archivo Black, sans-serif",
+            fontSize: { xs: "1rem", md: "1.5rem" },
+            color: "black",
+            textAlign: "center",
+            lineHeight: "100%",
+            maxWidth: "400px",
+            marginTop:"30px"
+          }}
+        >
+          Develop Once. Access from all platforms.
+        </Typography>
+        <Typography
+          variant="h2"
+          component="h2"
+          sx={{
+            fontFamily: "Inter, sans-serif",
+            fontSize: { xs: "1rem", md: "1rem" },
+            color: "black",
+            textAlign: "center",
+            lineHeight: "150%",
+            maxWidth: "600px",
+          }}
+        >
+          WebAR Metaversal Deployment automatically makes your Web AR content available across smartphones, computers and AR and VR headsets.
+        </Typography>
+
         <div
+
+
         style={{
             position:"absolute",
           width: "420px",
           height: "420px",
           right: "0",
           bottom: "0",
-          background: "rgb(18 110 226 / 9%)",
+          background: "rgb(18 110 226 / 20%)",
           filter: "blur(80px)",
           zIndex: "1",
         }}

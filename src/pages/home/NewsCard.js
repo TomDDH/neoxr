@@ -16,7 +16,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite"
 import ShareIcon from "@mui/icons-material/Share"
 import MoreVertIcon from "@mui/icons-material/MoreVert"
 import ArrowRightAltSharpIcon from "@mui/icons-material/ArrowRightAltSharp"
-
+import { Link } from "gatsby"
 const NewsCard = props => {
 
 
@@ -74,8 +74,15 @@ const NewsCard = props => {
             marginLeft:"auto"
           }}
         >
-          <ArrowRightAltSharpIcon
-          ></ArrowRightAltSharpIcon>
+
+
+          <Link to={props.link}>
+
+          <ArrowRightAltSharpIcon />
+
+
+          </Link>
+
         </Button>
       </CardActions>
     </Card>

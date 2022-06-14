@@ -9,7 +9,7 @@ import NavBar from "./navbar"
 const Layout = props => {
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar mode={props.mode}></NavBar>
       {props.children}
       <Footer></Footer>
     </div>
